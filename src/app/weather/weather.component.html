@@ -1,0 +1,22 @@
+<label for="cityName"><strong>Name: </strong></label>
+<input id="cityName" [(ngModel)]="RequestedCity" type="text" pInputText/>
+<br>
+<br>
+<p-table [value]="citiesInfo">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Stad</th>
+          <th>Temperatuur</th>
+          <th>Informatie</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-city>
+      <tr>
+          <td>{{city.name}}</td>
+          <td>{{city.temp}}</td>
+          <td>{{city.info}}</td>
+      </tr>
+  </ng-template>
+</p-table>
+<br>
+<img src="{{currentPhoto}}" alt="">
